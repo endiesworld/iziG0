@@ -1,23 +1,25 @@
 const path = require("path");
 module.exports = {
     entry: "./src/index.js",
-    outpout:{
+    output:{
         path: path.resolve(__dirname,"dist"),
         filename: "main.js"
     },
     module: {
         rules: [
-         
           {
-            test: /\.css$/,
-            exclude:  /node_modules/,
+            test: /\.css$/i,
             use: [
+              // Creates `style` nodes from JS strings
               'style-loader',
-              'css-loader',
-             ],
-             include: path.resolve(__dirname, '../'),
-          },
-        ],
+              // Translates CSS into CommonJS
+              'css-loader'
+              // Compiles Sass to CSS
+              //'sass-loader',
+            ]
+          }
+          
+        ]
       }
 
 }

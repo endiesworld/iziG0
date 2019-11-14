@@ -1,3 +1,3 @@
 //import './scss/style.scss';
-//import './css/iziCSS.css';
+import './css/izicss.css';
 alert("Hello from Webpack") ;
