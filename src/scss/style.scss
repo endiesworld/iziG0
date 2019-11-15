@@ -1,5 +1,11 @@
- $bg-color: rgba(0, 77, 128, 0.445);
+ @import "~bootstrap/scss/bootstrap" ;
+ 
+ $bg-color: #F8F9FA;
 
  body {
      background: $bg-color;
+     background-image: url(../images/background.png);
+     background-repeat: no-repeat;
+     background-attachment: fixed;
+     background-position: center;
  }
