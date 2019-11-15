@@ -13,7 +13,10 @@ module.exports = {
           },
           {
             test: /\.s[ac]ss$/i,
-            use: ['style-loader','css-loader','sass-loader'],
+            use: ['style-loader', // loads the final js file as a style sheet into DOM
+            'css-loader', // converts css into js file
+            'sass-loader' // Turns scss into css
+           ],
           },
           {
             test: /\.(png|jpe?g|gif)$/i,
