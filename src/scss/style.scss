@@ -1,6 +1,8 @@
  @import "~bootstrap/scss/bootstrap" ;
+ @import "~@fortawesome/fontawesome-free/scss/fontawesome.scss" ;
+ @import "~rfs/scss" ;
  
- $bg-color: #F8F9FA;
+ $bg-color: rgb(250, 255, 255);
 
  body {
      background: $bg-color;
@@ -8,4 +10,32 @@
      background-repeat: no-repeat;
      background-attachment: fixed;
      background-position: center;
+ };
+
+ i.fas,
+ i.fab {
+   border: 1px solid black;
+   width: 100px;
+   height: 100px;
  }
+ .navbar{
+   background-color: hsla(360, 100%, 39%, 1);
+   font-size: calc(0.5rem + 1.5vw);
+ }
+
+ .dropdown-menu{
+  background-color: hsla(360, 100%, 39%, 1);
+ }
+.nav-link{
+  text-decoration-color: black;
+}
+.logo{
+  margin-right: 20%;
+  margin-left: 5%;
+}
+
+@media (min-width: 1200px) {
+  .navbar {
+    font-size: 1.2rem;
+  }
+}

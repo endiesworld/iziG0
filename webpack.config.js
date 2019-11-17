@@ -41,7 +41,15 @@ module.exports = {
               loader: 'html-loader', // html file loader reads all html contents and requires them by chosing suitable file loaders
               
             }
-          }
+          },
+          {
+            test: /\.(ttf|eot|svg|woff(2)?)(\?v=[0-9]\.[0-9]\.[0-9])$/,
+            loader: "file-loader",
+            options: {
+            
+            outputPath: "fonts/"
+            }
+        }
         ],
       },
       plugins: [ new CleanWebpackPlugin(),// To clean up the dist folder after each build.
