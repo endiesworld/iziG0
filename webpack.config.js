@@ -4,11 +4,12 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 module.exports = {
     entry:{
         main: "./src/index.js",
-        vendorCode: "./src/vendorCode.js" 
+        vendorCode: "./src/vendorCode.js" ,
+        babel: "@babel/polyfill"
     },
     output:{
         path: path.resolve(__dirname,"dist"),
-        filename: "[name].[contentHash].bundle.js" //[contentHash is to eliminate caching by the the browser after we carry out a modification on our code]
+        filename: "js/[name].[contentHash].bundle.js" //[contentHash is to eliminate caching by the the browser after we carry out a modification on our code]
     },
     module: {
         rules: [
