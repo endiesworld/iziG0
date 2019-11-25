@@ -1,14 +1,16 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require("path");
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin') ;
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 module.exports = {
     entry:{
         main: "./src/index.js",
-        vendorCode: "./src/vendorCode.js" 
+        vendorCode: "./src/vendorCode.js",
+        babel: "@babel/polyfill"
     },
     output:{
         path: path.resolve(__dirname,"dist"),
-        filename: "[name].[contentHash].bundle.js" //[contentHash is to eliminate caching by the the browser after we carry out a modification on our code]
+        filename: "js/[name].[contentHash].bundle.js" //[contentHash is to eliminate caching by the the browser after we carry out a modification on our code]
     },
     module: {
         rules: [
@@ -49,7 +51,14 @@ module.exports = {
             
             outputPath: "fonts/"
             }
-        }
+        },
+        {
+          test: /\.js$/,
+          exclude:  /node_modules/,
+          use:{
+              loader: 'babel-loader'
+          }
+      }
         ],
       },
       plugins: [ new CleanWebpackPlugin(),// To clean up the dist folder after each build.
