@@ -5,7 +5,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 module.exports = {
     entry:{
         main: "./src/index.js",
-        vendorCode: "./src/vendorCode.js",
+        vendorCode: "./src/vendorCode.js" ,
         babel: "@babel/polyfill"
     },
     output:{

@@ -1,4 +1,4 @@
-$danger: hsla(360, 100%, 39%, 1); 
+@import "./bootstrapVariable.scss" ; 
 @import "~bootstrap/scss/bootstrap" ;
 @import "~@fortawesome/fontawesome-free/scss/fontawesome.scss" ;
 @import "~rfs/scss" ;
@@ -20,9 +20,11 @@ $danger: hsla(360, 100%, 39%, 1);
    height: 100px;
  }
  .navbar{
-   font-size: calc(0.5rem + 1.5vw);
+   font-size: calc(0.2rem + 1vw);
  }
- 
+.navbarResponsive{
+  display: none;
+}
  
 .nav-link{
   text-decoration-color: black;
@@ -37,4 +39,7 @@ $danger: hsla(360, 100%, 39%, 1);
   .navbar {
     font-size: 1rem;
   }
+  .navbarResponsive{
+  display: block;
+}
 }

@@ -1,21 +1,11 @@
+export const header = (width) => {
+    let element = document.querySelector(".intro") ;
+    element.innerHTML = `Welcome to iziGo.home Page, your window's width is ${width}`;
 
-export class Mobile {
-    constructor (screenSize){
-        this.screenSize = screenSize ;
-    }
-
- addCollapse () {
-   let element = document.getElementById("navbarSupportedContent") ;
-   element.classList.add("collapse") ; 
 }
 
- addEventListenerToNavBar (){
-    let element = document.getElementById("collapseButton") ;
-    element.addEventListener("click", event => {
-        document.getElementsByClassName("collapse").style.width = "250px" ;
-    }) ;
-}
 
- 
-
+export const showElement = () => {
+    let element = document.querySelector(".navbarResponsive");
+    element.style.display = "block" ;
 }
