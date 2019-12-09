@@ -34,12 +34,22 @@
   margin-right: 10%;
   margin-left: 5%;
 }
+.sidePanadel{
+  width: 100px;
+  position: fixed;
+  z-index: 1;
+  height: 250px;
+  top: 0;
+  right: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
 
 @media (min-width: 1000px) {
   .navbar {
     font-size: 1rem;
   }
-  .navbarResponsive{
-  display: block;
-}
+ 
 }
