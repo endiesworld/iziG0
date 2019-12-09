@@ -1,6 +1,6 @@
 import './scss/style.scss';
 import './css/izicss.css';
-import {showElement, hideNavBarElement  } from './js/mobileView'
+import { showElement, hideNavBarElement, addDownloadImages  } from './js/mobileView'
 import {addBootstrapNavElement} from './js/bigScreenView'
 
  const header = (width) => {
@@ -13,6 +13,7 @@ import {addBootstrapNavElement} from './js/bigScreenView'
     header(screen);
     if (screen <1200) {
         hideNavBarElement() ;
+        //addDownloadImages() ;
     }
     else {
         addBootstrapNavElement() ;        
