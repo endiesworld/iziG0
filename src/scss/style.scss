@@ -13,21 +13,13 @@
      background-position: center;
  };
 
- .appStoreImages{
-   width: 0;
- }
  i.fas,
  i.fab {
    border: 1px solid black;
    width: 100px;
    height: 100px;
  }
- .navbar{
-   font-size: calc(0.2rem + 1vw);
- }
-.navbarResponsive{
-  display: none;
-}
+
  
 .nav-link{
   text-decoration-color: black;
@@ -37,17 +29,18 @@
   margin-right: 10%;
   margin-left: 5%;
 }
-.sidePanadel{
-  width: 100px;
+.navbarResponsive{
+  width: 0;
   position: fixed;
   z-index: 1;
-  height: 250px;
+  height: auto;
   top: 0;
   right: 0;
-  background-color: #111;
+  background-color:hsla(360, 100%, 39%, 1);
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
+  display: block;
 }
 
 @media (min-width: 1000px) {
