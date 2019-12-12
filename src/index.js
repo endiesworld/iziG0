@@ -1,6 +1,6 @@
 import './scss/style.scss';
 import './css/izicss.css';
-import { showElement, hideNavBarElement, addDownloadImages  } from './js/mobileView'
+import { showElement, hideNavBarElement, addDownloadImages, closeLinks  } from './js/mobileView'
 import {addBootstrapNavElement} from './js/bigScreenView'
 
  const header = (width) => {
@@ -20,8 +20,10 @@ import {addBootstrapNavElement} from './js/bigScreenView'
     }
 }
 const eventListenerRegister = () => {
-    let element = document.querySelector(".navbarButton");
-    element.addEventListener("click", showElement);
+    let navBarCollapse = document.querySelector(".navbarButton");
+    let closeLinkItems = document.querySelector(".closebtn") ;
+    navBarCollapse.addEventListener("click", showElement);
+    closeLinkItems.addEventListener("click", closeLinks) ;
     window.addEventListener("resize", reLoadPage);
 }
 reLoadPage() ;

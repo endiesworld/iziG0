@@ -1,25 +1,28 @@
 
-
-import iPhoneLogo from "../images/mobileApple2.png";
-import androidLogo from "../images/mobileGoogle2.png";
-
 let getQuerySelectorElement = (element) => {
     return document.querySelector(element);
 }
 
 export const showElement = () => {
-    let element = getQuerySelectorElement("#navbarSupportedContent");
+    let element = getQuerySelectorElement(".navbarResponsive");
     element.classList.remove("collapse", "navbar-collapse");
-    //element.style.width = "50%";
-    // element.style.display = "block" ;
-    //element.classList.remove("navbarResponsive" );
-    //element.className+= " sidepanel" ;
+    let closeButton = getQuerySelectorElement(".closebtn") ;
+    element.style.width = "50%";
+    closeButton.style.display = "block" ;
 }
 
 export const hideNavBarElement = () => {
     let element = getQuerySelectorElement("#navbarSupportedContent");
+    element.classList.remove("collapse", "navbar-collapse");
     let navbarImages = getQuerySelectorElement(".appStoreImages");
     navbarImages.style.display = "none";
-    //element.style.width = "0";
-    element.classList.remove("collapse", "navbar-collapse");
+    if (!element.classList.contains("navbarResponsive")) {
+    element.className +=" navbarResponsive";
+    }  
+}
+
+export const closeLinks = ()=> {
+    let element = getQuerySelectorElement(".navbarResponsive");
+    //element.style.display = "none";
+    element.style.width = "0";
 }

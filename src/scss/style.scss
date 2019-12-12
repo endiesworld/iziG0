@@ -19,8 +19,10 @@
    width: 100px;
    height: 100px;
  }
-
- 
+.closebtn{
+  margin-left: 90%;
+  transition: 0.3s;
+} 
 .nav-link{
   text-decoration-color: black;
 }
@@ -30,6 +32,19 @@
   margin-left: 5%;
 }
 
+.navbarResponsive{
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  height: auto;
+  top: 0;
+  right: 0;
+  background-color:hsla(360, 100%, 39%, 1);
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+ 
+}
 
 @media (min-width: 1000px) {
   .navbar {
